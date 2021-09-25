@@ -1,13 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+:root{
+    --background: hsl(0, 0%, 100%);
+    --top-background: hsl(225, 100%, 98%);
+    --card-background: hsl(227, 47%, 96%);
+    --primary-text: hsl(230, 17%, 14%);
+    --secondary-text: hsl(228, 12%, 44%);
+    
+}
+.dark_theme{
+    --background: hsl(230, 17%, 14%);
+    --top-background:  hsl(232, 19%, 15%);
+    --card-background: hsl(228, 28%, 20%);
+    --primary-text: hsl(0, 0%, 100%);
+    --secondary-text: hsl(228, 34%, 66%);
+}
 html{
     min-height: 100%;
 }
 body{
     height: 100%;
     margin: 0;
-    background-color: hsl(230, 17%, 14%);
+    background-color: var(--top-background);
     font-family: 'Inter', sans-serif;
-    color: white
+}
+h1{
+    color: var(--primary-text);
 }
 header{
     width: 80%;
@@ -22,6 +39,7 @@ header{
 }
 #button_container p{
     font-size: 14px;
+    color: var(--secondary-text);
 }
 .switch {
     position: relative;
@@ -42,7 +60,7 @@ header{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: gray;
+    background-color: hsl(230, 22%, 74%);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -79,13 +97,12 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 #social_network_container{
+    background-color: var(--top-background);
     width: 80%;
-    background-color: inherit;
     display: flex;
 }
 .social_network{
-    background-color: hsl(228, 28%, 20%);
-    color: hsl(228, 34%, 66%);
+    background-color: var(--card-background);
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -122,7 +139,7 @@ input:checked + .slider:before {
     height: 1.5rem;
 }
 .icon_user_container p{
-    color: hsl(228, 34%, 66%);
+    color: var(--secondary-text);
     margin-left: 0.5rem;
     margin-top: 0.5rem;
     font-size: 12px;
@@ -133,15 +150,15 @@ input:checked + .slider:before {
     height: 70%;
 }
 .quantity_followers{
-    color: white;
+    color: var(--primary-text);
     font-size: 3rem;
     margin-top: -0.5rem;
     margin-bottom: -2rem;
 }
 .followers{
     width: 80%;
-    color: hsl(228, 34%, 66%);
-    letter-spacing: 0.3rem;
+    color: var(--secondary-text);
+    letter-spacing: 0.2rem;
     margin-top: 2rem;
     margin-left: 10%;
     font-weight: 800;
@@ -154,20 +171,22 @@ input:checked + .slider:before {
     color: #DC414C;
 }
 #daily_overview_container{
-    width: 80%;
+    max-width: 100%;
     padding-left: 10%;
+    padding-right: 10%;
     gap: 5%;
-    background-color: hsl(232, 19%, 15%);
+    background-color: var(--background);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 h2{
     width: 85%;
+    color: var(--primary-text);
 }
 .overview_social_network_container{
-    background-color: hsl(228, 28%, 20%);
-    color: hsl(228, 34%, 66%);
+    background-color: var(--card-background);
+    color: var(--secondary-text);
     height: 8rem;
     display: flex;
     flex-wrap: wrap;
@@ -187,7 +206,7 @@ h2{
 }
 .overview_social_network p{
     font-size: 14px;
-    color: hsl(228, 34%, 66%);
+    color: var(--secondary-text);
 }
 .overview_social_network .icon{
     margin-top: -1rem;
@@ -203,7 +222,7 @@ h2{
     color: #1EB589;
 }
 .overview_balance p{
-    color: white;
+    color: var(--primary-text);
     font-size: 20px;
     margin-top: -.5rem;
     text-align: left;
